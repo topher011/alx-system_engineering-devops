@@ -1,2 +1,8 @@
 #!/usr/bin/env ruby
-#puts ARGV[0].scan(/hbt*n/).join
+
+input = ARGV[0]
+
+output = input.scan(/hbt{0,5}n/).reject { |match| match == 'hbn' }.join
+
+puts output
+
